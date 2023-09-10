@@ -58,10 +58,10 @@ jobs:
           package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp'
           slot-name: staging
 
-      - name: Login for az cli commands 
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      # - name: Login for az cli commands 
+        # uses: azure/login@v1
+        # with:
+          # creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: create db connection string
         run: |
